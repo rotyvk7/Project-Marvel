@@ -1,0 +1,128 @@
+/*=== CONFIGURAÇÕES GLOBAIS ==================================================*/
+
+* {
+margin: 0;
+padding: 0;
+font-size: 100%;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+box-sizing: border-box;
+
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'ssf4', Courier, monospace;
+  background: var(--cor-secundaria);
+}
+
+body::before {
+  content: '';
+  background-image: url('../src/imagens/785502.gif');
+  background-repeat: no-repeat; /*para não repetir a imagem*/
+  background-size: cover; /*para cobrir todo o background*/
+  position: absolute; /*Como se botássemos uma folha por cima da outra*/
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+/*=== VARIÁVEIS  ===================================================================*/
+
+:root {
+  --cor-vermelha-principal: #D60223;
+  --cor-vermelha-media: #f89284;
+  --cor-vermelha-fraca: #ffbebe;
+
+  --cor-marrom-fraco: #ebd5d2;
+
+  --cor-azul-principal: #0271F7;
+  --cor-azul-media: #d3ffff;
+  --cor-azul-fraca: #8fbff8;
+
+  --cor-roxa-fraca: #c2c2f1;
+
+  --cor-titulo-forte: #f77a2c;
+  --cor-titulo-fraco: #faefd8;
+
+  --cor-padrao: #fff;
+  --cor-secundaria: #000;
+  
+}
+
+/*=== ESTILOS  ===================================================================*/
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header .title {
+  color: var(--cor-titulo-fraco);
+  text-transform: uppercase;
+  font-size: 5.2rem;
+  line-height: 10.2rem;
+  -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.selection-character {
+  display: flex;
+  align-items: center; /*Sempre vai alinhar todos os elementros no centro*/
+  justify-content: center; /*Sempre vai alinhar horizontalmente no centro*/
+  z-index: 1;
+}
+
+.selection-character .big-character{
+  text-align: center;
+  width: 30%;
+  height: 70vh;
+  position: relative;
+
+}
+
+.selection-character .big-character img {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selection-character .big-character .name {
+  
+}
+
+
+
+/*=== FONTES ===================================================================*/
+
+@font-face {
+  font-family: 'ssf4';
+
+  src: url('../src/fontes/SSF4_ABUKET.woff');
+}
+
+@font-face {
+  font-family: 'command';
+
+  src: url('../src/fontes/PILOT_COMMAND.otf');
+}
+
+
+/*=== ESTILOS ===================================================================*/
+
+.title {
+  font-family: 'ssf4';
+}
