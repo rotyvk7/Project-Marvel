@@ -1,14 +1,55 @@
+/*=== ANIMAÇÕES  ===================================================================*/
+
+@keyframes c-glowing-blue {
+  0% {
+    box-shadow: 0 0 5px var(--cor-azul-fraca), 0 0 5px var(--cor-azul-fraca), 0 0 15px var(--cor-azul-fraca), 0 0 20px var(--cor-azul-principal), 0 0 10px var(--cor-azul-principal), 0 0 10px var(--cor-azul-principal), 0 0 10px var(--cor-azul-principal), 0 0 10px var(--cor-azul-principal)
+  }
+
+  to {
+    box-shadow: 0 0 2.5px var(--cor-azul-fraca), 0 0 2.5px var(--cor-azul-fraca), 0 0 7.5px var(--cor-azul-fraca), 0 0 10px var(--cor-azul-principal), 0 0 5px var(--cor-azul-principal), 0 0 5px var(--cor-azul-principal), 0 0 5px var(--cor-azul-principal), 0 0 2px var(--cor-azul-principal)
+  }
+}
+
+@keyframes c-glowing-red {
+  0% {
+    box-shadow: 0 0 5px var(--cor-marrom-fraco), 0 0 5px var(--cor-marrom-fraco), 0 0 15px var(--cor-marrom-fraco), 0 0 20px var(--cor-vermelha-principal), 0 0 10px var(--cor-vermelha-principal), 0 0 10px var(--cor-vermelha-principal), 0 0 10px var(--cor-vermelha-principal), 0 0 10px var(--cor-vermelha-principal)
+  }
+
+  to {
+    box-shadow: 0 0 2.5px var(--cor-marrom-fraco), 0 0 2.5px var(--cor-marrom-fraco), 0 0 7.5px var(--cor-marrom-fraco), 0 0 10px var(--cor-vermelha-principal), 0 0 5px var(--cor-vermelha-principal), 0 0 5px var(--cor-vermelha-principal), 0 0 5px var(--cor-vermelha-principal), 0 0 2px var(--cor-vermelha-principal)
+  }
+}
+
+@keyframes text-glowing-blue {
+  0% {
+    text-shadow: 0 0 1px var(--cor-padrao), 0 0 1px var(--cor-padrao), 0 0 1px var(--cor-padrao), 0 0 1px var(--cor-azul-media), 0 0 5px var(--cor-azul-media), 0 0 2px var(--cor-azul-media), 0 0 10px var(--cor-azul-media), 0 0 10px var(--cor-azul-media)
+  }
+
+  to {
+    text-shadow: 0 0 .5px var(--cor-padrao), 0 0 .5px var(--cor-padrao), 0 0 .5px var(--cor-padrao), 0 0 .5px var(--cor-azul-media), 0 0 5px var(--cor-azul-media), 0 0 .5px var(--cor-azul-media), 0 0 5px var(--cor-azul-media), 0 0 2px var(--cor-azul-media)
+  }
+}
+
+@keyframes text-glowing-red {
+  0% {
+    text-shadow: 0 0 1px var(--cor-marrom-fraco), 0 0 1px var(--cor-marrom-fraco), 0 0 1px var(--cor-marrom-fraco), 0 0 1px var(--cor-vermelha-fraca), 0 0 5px var(--cor-vermelha-fraca), 0 0 2px var(--cor-vermelha-fraca), 0 0 10px var(--cor-vermelha-fraca), 0 0 10px var(--cor-vermelha-fraca)
+  }
+
+  to {
+    text-shadow: 0 0 .5px var(--cor-marrom-fraco), 0 0 .5px var(--cor-marrom-fraco), 0 0 .5px var(--cor-marrom-fraco), 0 0 .5px var(--cor-vermelha-fraca), 0 0 5px var(--cor-vermelha-fraca), 0 0 .5px var(--cor-vermelha-fraca), 0 0 5px var(--cor-vermelha-fraca), 0 0 2px var(--cor-vermelha-fraca)
+  }
+}
+
 /*=== CONFIGURAÇÕES GLOBAIS ==================================================*/
 
 * {
-margin: 0;
-padding: 0;
-font-size: 100%;
-border: 0;
-font: inherit;
-vertical-align: baseline;
-box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 ul {
@@ -28,7 +69,7 @@ body::before {
   position: absolute; /*Como se botássemos uma folha por cima da outra*/
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 /*=== VARIÁVEIS  ===================================================================*/
@@ -54,6 +95,7 @@ body::before {
   
 }
 
+
 /*=== ESTILOS  ===================================================================*/
 
 main {
@@ -63,28 +105,28 @@ main {
   justify-content: center;
 }
 
-.header {
+.cabecalho {
   z-index: 1;
   display: flex;
   justify-content: center;
 }
 
-.header .title {
+.cabecalho .titulo {
   color: var(--cor-titulo-fraco);
   text-transform: uppercase;
-  font-size: 5.2rem;
-  line-height: 10.2rem;
+  font-size: 52px;
+  line-height: 102px;
   -webkit-text-stroke: 2px var(--cor-titulo-forte);
 }
 
-.selection-character {
+.selecao-de-personagens {
   display: flex;
   align-items: center; /*Sempre vai alinhar todos os elementros no centro*/
   justify-content: center; /*Sempre vai alinhar horizontalmente no centro*/
-  z-index: 1;
+  
 }
 
-.selection-character .big-character{
+.selecao-de-personagens .personagem-grande {
   text-align: center;
   width: 30%;
   height: 70vh;
@@ -92,16 +134,114 @@ main {
 
 }
 
-.selection-character .big-character img {
-
+.selecao-de-personagens .personagem-grande img {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top:50%;
   transform: translate(-50%, -50%);
 }
 
-.selection-character .big-character .name {
+.selecao-de-personagens .personagem-grande .nome::before {
+  content: '';
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: -15px;
+  left: 0;    
   
+}
+
+.selecao-de-personagens .personagem-grande .nome h2 {
+  color: var(--cor-padrao);
+  font-family: 'command', sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 27px;
+}
+
+.selecao-de-personagens .personagem-grande.personagem-jogador-1 .nome::before {
+  background-color: var(--cor-azul-principal);
+}
+
+
+.selecao-de-personagens .personagem-grande.personagem-jogador-2 .nome::before {
+  background-color: var(--cor-vermelha-principal);
+}
+
+.selecao-de-personagens .lista-de-personagens {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: center;
+  gap: 12px;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem {
+  border: 2px solid var(--cor-padrao);
+  background-color: var(--cor-padrao);
+  width: 30%;
+  height: 160px;
+  cursor: pointer; /*para ficar clicável*/
+  z-index: 2;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.15s ease-in-out; /*Ele da um efeito de zoom na tela*/
+
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.selecionado {
+  border: 2px solid var(--cor-azul-media);
+  animation: c-glowing-blue .3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem:hover {
+  animation: c-glowing-blue .3s ease-in-out infinite;
+  animation-direction: alternate;
+  transform: scale(1.07);
+  z-index: 2;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.jogador-2-selecionado {
+  border: 2px solid var(--cor-vermelha-fraca);
+  animation: c-glowing-red .3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.jogador-2-selecionado:hover {
+  animation: c-glowing-red .3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem .tag{
+  display: none;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: var(--cor-azul-media);
+  transition: opacity .3 ease-in-out;
+  animation: text-glowing-blue .3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.selecionado .tag{
+  display: block;
+  animation: text-glowing-red .3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.jogador-2-selecionado .tag{
+  display: block;
+  animation: text-glowing-red .3s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 
@@ -121,8 +261,49 @@ main {
 }
 
 
-/*=== ESTILOS ===================================================================*/
+/*=== RESPONSIVIDADE ===================================================================*/
 
-.title {
-  font-family: 'ssf4';
+@media (max-width: 1280px) {
+  .cabecalho .titulo{
+    font-size: 40px;
+  }
+
+  .selecao-de-personagens .lista-de-personagens{
+    max-width: 330px;
+
+  }
+
+  .selecao-de-personagens .lista-de-personagens .personagem {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px){
+  
+  body::before{
+    background-image: url("../src/imagens/785502.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+  }
+
+  main {
+    padding: 0 5px;
+    justify-content: start;
+  }
+
+  .cabecalho .titulo {
+    font-size: 22px;
+  }
+
+  .selecao-de-personagens .personagem-grande{
+    display: none;
+  }
+}
+
+@media(max-width: 360px){
+  .cabecalho .titulo{
+      font-size: 19px;
+  }
 }
